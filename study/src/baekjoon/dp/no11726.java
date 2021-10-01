@@ -25,6 +25,6 @@ public class no11726 {
         }
 
         System.out.println(dp[n]%10007);
-        
+
     }
 }
