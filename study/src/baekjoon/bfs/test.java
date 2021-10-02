@@ -21,6 +21,13 @@ public class test {
         while(iter.hasNext())
             System.out.print(iter.next() + " ");
 
+        String str = "Hello world";
+        char c1 = str.charAt(0);
+        char c2 = str.toCharArray()[2];
+
+        System.out.println(c1);
+        System.out.println(c2);
+
 
 
     }
