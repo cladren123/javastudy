@@ -4,7 +4,7 @@ import java.lang.*;
 import java.io.*;
 import java.util.*;
 
-// 분해합 
+// 분해합
 
 public class NO2231 {
 
