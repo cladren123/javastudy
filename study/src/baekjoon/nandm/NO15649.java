@@ -13,6 +13,7 @@ public class NO15649 {
     static int[] store;
 
 
+    // 모든 경우의 수를 탐색
     public static void dfs15649(int stage) {
 
         // 종단조건
@@ -24,6 +25,7 @@ public class NO15649 {
             return;
         }
 
+        // 1~n까지 숫자
         for(int i=1; i <= n; i++){
             if(visited[i] == 0) {
                 visited[i] = 1;
