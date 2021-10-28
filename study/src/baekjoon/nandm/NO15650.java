@@ -15,6 +15,7 @@ public class NO15650 {
     public static void dfs15650(int stage) {
 
         // 종단조건
+        // 숫자 m개를 선택
         if(stage == m){
             for(int i = 0; i < m; i++){
                 System.out.print(store[i] + " ");
@@ -25,6 +26,8 @@ public class NO15650 {
 
         for(int j = 0; j < n; j++){
             if(visited[j] == 0) {
+                // stage는 자릿수라 보면된다. store[stage-1]은 이전 숫자이다.
+                // 오름차순이므로 이전 숫자보다 작으면 지나가는 함수를 구현했다.
                 if(stage > 0 && store[stage-1] > j+1) continue;
                 else {
                     visited[j] = 1;
@@ -37,7 +40,7 @@ public class NO15650 {
 
 
         /*
-        1안
+        2안
         for(int j = 0; j < n; j++){
             if(visited[j] == 0){
                 if(stage == 0) {
