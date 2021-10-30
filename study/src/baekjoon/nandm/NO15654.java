@@ -4,6 +4,8 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
+// N과 M (5)
+
 public class NO15654 {
 
     static int n,m;
