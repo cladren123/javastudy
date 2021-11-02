@@ -4,6 +4,8 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
+// 백준 10162 전자레인지
+
 public class NO10162 {
 
     public static void main(String[] args) {
