@@ -44,9 +44,5 @@ public class NO10162 {
             System.out.print(-1);
         }
 
-
-
-
-
     }
 }

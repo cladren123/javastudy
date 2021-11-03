@@ -26,13 +26,11 @@ public class NO15652 {
 
         // 탐색
         for(int j = 0; j < n; j++) {
-
+            // 현재 들어오려는 숫자가 이전 숫자보다 작으면 생략한다.
             if(stage > 0 && store[stage-1] > j+1) continue;
             store[stage] = j+1;
             dfs15652(stage+1);
-
         }
-
     }
 
     public static void main(String[] args) throws IOException {

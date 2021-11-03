@@ -25,6 +25,7 @@ public class NO15654 {
             return;
         }
 
+        // 경우의 수 탐색
         for(int i = 0; i < n; i++){
             if(visited[i] == 0) {
                 visited[i] = 1;
@@ -46,6 +47,8 @@ public class NO15654 {
 
         s = br.readLine();
         st = new StringTokenizer(s, " ");
+
+        // n개의 수를 담는다.
         card = new int[n];
         for(int i = 0; i < n; i++) {
             card[i] = Integer.parseInt(st.nextToken());
