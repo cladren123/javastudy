@@ -4,20 +4,17 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-// N과 M (10)
+// 백준 15665 N과 M (11)
 
-public class NO15664 {
+public class NO15665 {
 
     static int n,m;
     static int[] card;
-    static int[] visited;
     static int[] store;
-
     static StringBuilder sb = new StringBuilder();
     static HashSet<String> set = new HashSet<>();
 
-
-    public static void dfs15664(int stage)
+    public static void dfs15665(int stage)
     {
         if(stage == m)
         {
@@ -30,7 +27,7 @@ public class NO15664 {
             if(!set.contains(sb2.toString()))
             {
                 sb.append(sb2.toString());
-                sb.append("\n");
+                sb.append('\n');
                 set.add(sb2.toString());
             }
             return;
@@ -38,39 +35,27 @@ public class NO15664 {
 
         for(int i = 0; i < n; i++)
         {
-            if(stage > 0 && store[stage-1] > card[i]) continue;
-            if(visited[i] == 0)
-            {
-                visited[i] = 1;
-                store[stage] = card[i];
-                dfs15664(stage+1);
-                visited[i] = 0;
-            }
-
+            store[stage] = card[i];
+            dfs15665(stage+1);
         }
+
     }
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
         n = scan.nextInt();
         m = scan.nextInt();
 
         card = new int[n];
-
         for(int i = 0; i < n; i++)
         {
             card[i] = scan.nextInt();
         }
         Arrays.sort(card);
 
-        visited = new int[n];
-        Arrays.fill(visited, 0);
-
         store = new int[m];
-        Arrays.fill(store, 0);
 
-        dfs15664(0);
+        dfs15665(0);
         System.out.print(sb);
 
     }
