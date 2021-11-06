@@ -11,7 +11,7 @@ public class NO15655 {
     static int n,m;
     static int[] card;
 
-    // 중복 바지일 때 사용
+    // 중복 방지일 때 사용
     static int[] visited;
     static int[] store;
 
