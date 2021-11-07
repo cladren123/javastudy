@@ -21,9 +21,33 @@ public class NO1715 {
         }
         Arrays.sort(card);
 
+        // 우선순위 큐 활용
+        PriorityQueue<Integer> pque = new PriorityQueue<>();
+        for(int i = 0; i < n; i++)
+        {
+            pque.offer(card[i]);
+        }
+
+        ArrayList<Integer> alist = new ArrayList<Integer>();
+
+        while(pque.size() != 1)
+        {
+            int a = pque.poll();
+            int b = pque.poll();
+            int com = a + b;
+            pque.offer(com);
+            alist.add(com);
+        }
+
         int answer = 0;
 
-        int[] dp = new int[n];
+        while(!alist.isEmpty())
+        {
+            answer += alist.remove(0);
+        }
+
+        System.out.print(answer);
+
 
     }
 }
