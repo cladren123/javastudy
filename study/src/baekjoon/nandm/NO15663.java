@@ -16,8 +16,7 @@ public class NO15663 {
     static int[] visited;
 
     // 중복제거용용
-   static HashSet<String> set = new HashSet<>();
-
+    static HashSet<String> set = new HashSet<>();
     static StringBuilder sb = new StringBuilder();
 
     public static void dfs15663(int stage)
