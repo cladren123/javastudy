@@ -121,14 +121,14 @@ public class 키패드누르기 {
 
                             else if(lcheck == rcheck)
                             {
-                                if(hand == "left")
+                                if(hand.equals("left") )
                                 {
                                     answer += "L";
                                     lhand[0] = i3;
                                     lhand[1] = j3;
                                 }
 
-                                if(hand == "right")
+                                if(hand.equals("right"))
                                 {
                                     answer += "R";
                                     rhand[0] = i3;
