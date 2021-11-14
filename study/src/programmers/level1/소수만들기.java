@@ -4,6 +4,12 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
+/*
+
+경우의 수를 구할 때
+다른 사람들은 주로 3중 포문을 이용했다.
+
+ */
 
 public class 소수만들기 {
 
