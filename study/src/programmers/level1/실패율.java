@@ -18,38 +18,53 @@ public class 실패율 {
 
     // 내림차순 : 큰 숫자에서 작은 숫자
 
+    static class Rate{
+        Integer idx;
+        Double rate;
+
+        public Rate(Integer idx, Double rate) {
+            this.idx = idx;
+            this.rate = rate;
+        }
+    }
+
     public static int[] solution(int N, int[] stages) {
-        int[] answer = {};
 
-        // 도달했던 사람들
-        int[] reachplayer = new int[N+1];
-        Arrays.fill(reachplayer, 0);
+        Double[] nowplayer = new Double[N+2];
+        Arrays.fill(nowplayer, 0.0);
 
-        // 현재 멈춰있는 사람들
-        int[] nowplayer = new int[N+1];
-        Arrays.fill(nowplayer, 0);
+        Double[] clearplayer = new Double[N+2];
+        Arrays.fill(clearplayer, 0.0);
 
         for(int i : stages)
         {
-            int newn = Math.min(i,N);
-            for(int j = 1; j <= newn; j++) reachplayer[j] += 1;
-            if(i < N+1) nowplayer[i] += 1;
+            nowplayer[i] += 1;
+            for(int j = 1; j <= i; j++) clearplayer[j] += 1;
         }
 
-        // 실패율
-        int[] fail = new int[N];
-         
+//        System.out.println(Arrays.toString(nowplayer));
+//        System.out.println(Arrays.toString(clearplayer));
 
+        ArrayList<Rate> array = new ArrayList<>();
+        for(int i = 1; i < N+1; i++)
+        {
+            if(clearplayer[i] == 0 )
+            {
+                array.add(new Rate(i, 0.0));
+                continue;
+            }
 
+            Double rate = nowplayer[i] / clearplayer[i];
+            array.add(new Rate(i, rate));
+        }
 
+        Collections.sort(array, ((o1, o2) -> Double.compare(o2.rate, o1.rate)));
 
-
-
-
-
-
-
-
+        int[] answer = new int[N];
+        for(int i = 0; i < array.size(); i++)
+        {
+            answer[i] = array.get(i).idx;
+        }
 
         return answer;
     }
