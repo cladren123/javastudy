@@ -21,13 +21,16 @@ public class 년2016 {
         String[] days = {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
 
         // 1월 1일 : 금요일
-        //                 금  월 화  금 일 수 금 월 목 토 화 목
+        // 금 월 화 금 일 수 금 월 목 토 화 목
+        // 5  1  2 5  0  3 5  1  4  6  2 4
 
-        int[] startmonth = {5, 1, 2, 5, 0, 4, 5, 1, 4, 6, 2, 4};
+        int[] startmonth = {5, 1, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
 
         int startnum = startmonth[a-1];
 
-        int targetnum = (startnum + (b%7)-1)%7;
+        int targetnum = startnum + (b % 7 - 1);
+        if(targetnum >= 7) targetnum = targetnum % 7;
+        if(targetnum < 0) targetnum = 6 + targetnum + 1;
 
         answer = days[targetnum];
 
