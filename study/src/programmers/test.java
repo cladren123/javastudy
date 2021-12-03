@@ -8,23 +8,13 @@ public class test {
 
     public static void main(String[] args) {
 
-        String n = "cab";
-        char[] st = n.toCharArray();
-        Arrays.sort(st);
+        String a = "10";
+        String b = "20";
 
-        String sorted = new String(st);
+        // b는 주체, a는 대상
+        System.out.println(b.compareTo(a));
 
-        System.out.println(sorted);
 
-        ArrayList<String> anList = new ArrayList<String>();
-        anList.add("ab");
-        anList.add("cd");
-
-        String[] answer;
-        answer = new String[anList.size()];
-        anList.toArray(answer);
-
-        System.out.println(Arrays.toString(answer));
 
 
     }
