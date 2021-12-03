@@ -12,7 +12,7 @@ public class 게임맵최단거리 {
 
         System.out.println(solution(maps1));
         System.out.println(solution(maps2));
-        
+
     }
 
     public static int solution(int[][] maps) {
