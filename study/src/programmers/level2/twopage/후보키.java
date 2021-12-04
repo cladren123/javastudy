@@ -27,9 +27,7 @@ public class 후보키 {
     static int m; // 추릴 후보키의 개수
     static int[] visited; // 탐색의 중복 여부 확인
     static int[] store; // 후보키 조합 저장
-
-    static ArrayList<String> hubostore = new ArrayList<>();
-
+    static ArrayList<String> hubostore = new ArrayList<String>(); // 후보키 최소성 확인
 
 
 
@@ -60,13 +58,48 @@ public class 후보키 {
     // 후보키 조합
     public static void dfs(int stage, String[][] relation)
     {
-
+        // 종단조건
         if(stage == m)
         {
-            System.out.println(Arrays.toString(store));
+//            System.out.println(hubostore);
+            // 최소성 확인
+
+            int nhubo = hubostore.size();
+            int flag1 = 0;
+
+
+
+            for(int i = 0; i < nhubo; i++)
+            {
+                String one = hubostore.get(i);
+                int none = one.length();
+
+                int checker = 0;
+
+                for(int j = 0; j < none; j++)
+                {
+                    for(int k = 0; k < m; k++)
+                    {
+                        if( (int)(one.charAt(j) - '0') == store[k])
+                        {
+                            checker += 1;
+                        }
+
+                    }
+                }
+
+                if(checker == none){
+                    flag1 = 1;
+                    break;
+                }
+            }
+
+            if(flag1 == 1) {
+                return;
+            }
+
 
             HashMap<String,Integer> map = new HashMap<String, Integer>();
-
 
             int flag = 1;
 
@@ -91,9 +124,15 @@ public class 후보키 {
                 }
             }
 
+            // 후보키가 될 수 있을 때
             if(flag == 1)
             {
                 answer += 1;
+                String one = "";
+                for(int j = 0; j < m; j++)
+                    one += store[j];
+                hubostore.add(one);
+
             }
             return;
         }
@@ -110,4 +149,6 @@ public class 후보키 {
             }
         }
     }
+
+
 }
