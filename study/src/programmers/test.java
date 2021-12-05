@@ -2,17 +2,29 @@ package programmers;
 
 
 import java.math.BigInteger;
+import java.lang.*;
 import java.util.*;
 
 public class test {
 
     public static void main(String[] args) {
 
-        String a = "10";
-        String b = "20";
+        HashMap<String, ArrayList<Integer>> map = new HashMap<>();
 
-        // b는 주체, a는 대상
-        System.out.println(b.compareTo(a));
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(0);
+
+        map.put("one", arr);
+
+        System.out.println(map.get("one"));
+
+        ArrayList<Integer> arr2 = new ArrayList<>(map.get("one"));
+        arr2.add(2);
+
+
+        map.put("one", arr2);
+
+        System.out.println(map.get("one"));
 
 
 
