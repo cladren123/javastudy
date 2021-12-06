@@ -27,6 +27,9 @@ public class 다리를지나는트럭오답 {
 
     }
 
+    // 문제에서 정해진 범위 내에서 다루어야 한다.
+    // 순서가 중요하다 -> 먼저 빠저나간 다음에 채워야 한다.
+
     public static int solution(int bridge_length, int weight, int[] truck_weights) {
             int answer = 0;
 
