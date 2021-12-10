@@ -9,8 +9,9 @@ public class test {
 
     public static void main(String[] args) {
 
-        String time1 = "10:12";
-        String time2 = "10:16";
+        Stack<Integer> store = new Stack<>();
+
+        System.out.println(store.size());
 
 
 
