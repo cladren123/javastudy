@@ -9,7 +9,10 @@ public class test {
 
     public static void main(String[] args) {
 
-        String one = "123";
+        String time1 = "10:12";
+        String time2 = "10:16";
+
+
 
 
 
