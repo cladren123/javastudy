@@ -9,7 +9,7 @@ public class 다음큰숫자 {
 
         System.out.println(solution(n1));
         System.out.println(solution(n2));
-        
+
     }
 
 
