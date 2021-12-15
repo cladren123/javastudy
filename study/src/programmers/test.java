@@ -9,12 +9,11 @@ public class test {
 
     public static void main(String[] args) {
 
-        Stack<Integer> store = new Stack<>();
 
-        System.out.println(store.size());
+        String a1 = "abc";
+        String a2 = "bc";
 
-
-
+        System.out.println(a1.contains(a2));
 
 
 
