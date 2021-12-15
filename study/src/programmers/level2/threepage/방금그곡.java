@@ -1,5 +1,12 @@
 package programmers.level2.threepage;
 
+// 36.7점
+// 문제의 조건 (None)
+// 36.7점
+// 멜로디를 비교하는 flag2 부분을 반복문 시작부분에 초기화 시켜주었다.
+// 100점
+// 이중포문의 역할을 melody.containse(m)으로 대체할 수 있다.
+
 public class 방금그곡 {
 
     public static void main(String[] args) {
