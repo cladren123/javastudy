@@ -29,19 +29,21 @@ public class 순위검색 {
             dfs(0, "", info[i]);
         }
 
-        int nquery = query.length;
+        // map에 저장된 점수 리스트를 오름차순 정렬
+        List<String> list = new ArrayList<>(map.keySet());
+        for(int i = 0; i < list.size(); i++ )
+        {
+            List<Integer> scorelist = map.get(list.get(i));
+            Collections.sort(scorelist);
+        }
 
+        int nquery = query.length;
         for(int i = 0; i < nquery; i++)
         {
-            int result = 0;
             String[] one = query[i].split(" ");
             String caseone = one[0] + one[2] + one[4] + one[6];
             int score = Integer.parseInt(one[7]);
-            // 이분 탐색
-
-            System.out.println(caseone);
             answer.add(bsearch(caseone,score));
-
         }
 
         return answer;
@@ -82,13 +84,10 @@ public class 순위검색 {
     // 이분탐색
     public static int bsearch(String caseone, int score)
     {
-        int result = 0;
-
         // 찾는 대상이 map에 없다면 0을 리턴
         if(!map.containsKey(caseone)) return 0;
 
         ArrayList<Integer> one = map.get(caseone);
-        Collections.sort(one);
 
         int start = 0;
         int end = one.size() - 1;
