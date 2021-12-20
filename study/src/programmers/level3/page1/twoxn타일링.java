@@ -6,7 +6,7 @@ public class twoxn타일링 {
 
         int n = 4;
         System.out.println(solution(n));
-        
+
     }
 
 
