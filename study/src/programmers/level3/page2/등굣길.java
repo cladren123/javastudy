@@ -1,6 +1,4 @@
-package programmers.level3.page3;
-
-import java.util.*;
+package programmers.level3.page2;
 
 public class 등굣길 {
 
