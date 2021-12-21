@@ -9,11 +9,16 @@ public class test {
 
     public static void main(String[] args) {
 
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(3);
+        list.add(2);
 
-        String a1 = "abc";
-        String a2 = "bc";
+        System.out.println(list);
 
-        System.out.println(a1.contains(a2));
+        Collections.sort(list, (o1, o2) -> o2 - o1);
+
+        System.out.println(list);
 
 
 
