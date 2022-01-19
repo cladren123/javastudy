@@ -7,7 +7,7 @@ public class 일일공옮기기 {
     public static void main(String[] args) {
 
         String s[] = {"1110","100111100","0111111010"};
-
+                                                        
         System.out.println(Arrays.toString(solution(s)));
 
     }
