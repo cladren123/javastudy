@@ -4,6 +4,6 @@ public class 카드짝맞추기2트 {
 
     public static void main(String[] args) {
 
-        
+
     }
 }
