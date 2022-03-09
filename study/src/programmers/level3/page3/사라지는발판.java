@@ -4,6 +4,12 @@ public class 사라지는발판 {
 
     class Solution {
 
+        public void main(String[] args) {
+
+
+
+        }
+
         public int[] dirX = {0,0,1,-1};
         public int[] dirY = {1,-1,0,0};
 
