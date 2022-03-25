@@ -11,13 +11,6 @@ public class 문자열압축 {
         String s5 = "xababcdcdababcdcd";
 
 
-
-//        System.out.println(solution(s1));
-//        System.out.println(solution(s2));
-//        System.out.println(solution(s3));
-//        System.out.println(solution(s4));
-//        System.out.println(solution(s5));
-
         // 테스트케이스 5번
         String s6 = "a";
         System.out.println(solution(s6));
@@ -50,7 +43,6 @@ public class 문자열압축 {
             // 초기값 설정
             pattern = news.substring(0, i);
             int count = 1;
-
             int check = 0;
 
             for(int j = i; j+i <= n; j += i)
@@ -95,3 +87,6 @@ public class 문자열압축 {
         return answer;
     }
 }
+
+
+
