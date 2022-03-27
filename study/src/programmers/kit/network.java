@@ -1,4 +1,4 @@
-package programmers.level3.kit;
+package programmers.kit;
 
 import java.util.*;
 

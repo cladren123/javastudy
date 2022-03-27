@@ -28,9 +28,7 @@ public class 카드짝맞추기 {
             }
         }
 
-        this.board = board.clone();
-        this.r = r;
-        this.c = c;
+
 
         // 탐색 경우의 수를 구하는 함수
         store = new int[n];
