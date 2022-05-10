@@ -113,8 +113,6 @@ public class 배열돌리기4구분17406 {
 
     }
 
-
-
     // 선택한 구역을 회전하는 함수
     public static void rotation(int r, int c, int s)
     {
