@@ -19,8 +19,7 @@ public class 금과은운반하기 {
             long start = 0;
             long end = (long)(1e5 * 4 * 1e9);
 
-            while(s
-            tart <= end)
+            while(start <= end)
             {
                 long mid = (start + end) / 2;
                 long gold = 0;
