@@ -7,8 +7,8 @@ import java.util.*;
 import java.io.*;
 
 
-class 일차원정원
-    {
+public class 일차원정원 {
+
         public static void main(String args[]) throws Exception
         {
 		/*
@@ -46,5 +46,5 @@ class 일차원정원
 
             }
         }
-    }
+
 }
